@@ -1,0 +1,22 @@
+when:
+  backend: datamanager
+  method: DELETE
+  path: /data-manager-api/namespaces/cells-e2e-boilerplate-acis/39716/locks/1769893
+  sequence: 1
+request:
+  headers:
+    authorization: Ym90LWNlbGxzLWUyZS1ib2lsZXJwbGF0ZS1hY2lzOlZUaU5LdVBnVzk5dFNYTGtKSmFMMDludmEzZFd6dUVGNEJ2TGlUcU0=
+    content-length: '0'
+    host: localhost:5002
+    connection: keep-alive
+    accept: application/json
+then:
+- return:
+    :headers:
+      content-length: '0'
+      Strict-Transport-Security: max-age=15724800; includeSubDomains
+      Server: nginx
+      Connection: keep-alive
+      Date: Fri, 12 Jun 2020 10:46:07 GMT
+    :status: 204 No Content
+    :body: ''

@@ -1,0 +1,21 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node", "@wdio/sync", "@wdio/cucumber-framework"],
+    "typeRoots": ["./src/types"],
+    "paths": {
+      "*": ["./*"],
+      "src/*": ["./src/*"]
+    },
+    "rootDir": "src",
+    "outDir": "lib",
+    "target": "es2018",
+    "lib": ["es2016", "dom"],
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*.ts", "src/framework/support/commands.js"],
+  "exclude": ["node_modules"]
+}

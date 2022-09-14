@@ -1,0 +1,31 @@
+when:
+  backend: datamanager
+  method: POST
+  path: /data-manager-api/namespaces/cells-e2e-boilerplate-acis/39782/locks
+  sequence: 1
+request:
+  headers:
+    authorization: Ym90LWNlbGxzLWUyZS1ib2lsZXJwbGF0ZS1hY2lzOlZUaU5LdVBnVzk5dFNYTGtKSmFMMDludmEzZFd6dUVGNEJ2TGlUcU0=
+    content-length: '29'
+    host: localhost:5002
+    connection: keep-alive
+    content-type: application/json
+    accept: application/json
+  body:
+    type: SHARED
+    timeout: 1
+then:
+- return:
+    :headers:
+      Strict-Transport-Security: max-age=15724800; includeSubDomains
+      Server: nginx
+      Connection: keep-alive
+      Content-Length: '100'
+      Date: Fri, 12 Jun 2020 10:46:31 GMT
+      Content-Type: application/json
+    :status: 200 OK
+    burned: false
+    expiration: '2020-06-12T10:47:31.262284Z'
+    timeout: 1
+    id: 1769899
+    type: SHARED

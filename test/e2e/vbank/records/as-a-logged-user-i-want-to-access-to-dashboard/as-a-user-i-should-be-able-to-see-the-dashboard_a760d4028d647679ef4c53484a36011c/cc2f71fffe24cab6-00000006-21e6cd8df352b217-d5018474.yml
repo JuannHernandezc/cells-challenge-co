@@ -1,0 +1,122 @@
+when:
+  backend: mock
+  method: GET
+  path: /movements
+  sequence: 1
+request:
+  headers:
+    sec-fetch-mode: cors
+    content-length: '0'
+    referer: http://localhost:8001/index.html
+    sec-fetch-site: same-site
+    accept-language: es-ES,es;q=0.9
+    origin: http://localhost:8001
+    host: localhost:5001
+    connection: keep-alive
+    accept-encoding: gzip, deflate, br
+    sec-fetch-dest: empty
+    accept: '*/*'
+    user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
+      Chrome/83.0.4103.61 Safari/537.36
+then:
+- return:
+    :headers:
+      content-length: '2534'
+      Access-Control-Allow-Origin: http://localhost:8001
+      X-Content-Type-Options: nosniff
+      Connection: keep-alive
+      Pragma: no-cache
+      Date: Fri, 12 Jun 2020 10:45:47 GMT
+      Cache-Control: no-cache
+      ETag: W/"9e6-Ni77chJFHjSNCrbUYmbgIZ3dj5M"
+      Access-Control-Allow-Credentials: 'true'
+      Vary: Origin, Accept-Encoding
+      Expires: '-1'
+      X-Powered-By: Express
+      Content-Type: application/json; charset=utf-8
+    :status: 200 OK
+    :body:
+    - id: 1
+      date: 21/02/2020
+      label: Cafetería ar
+      description: N 2018064000673121 MEDICOS SIN FRONTERAS, ESPA/A
+      category: '9999'
+      icon: coronita:loaneuro
+      categoryDescription: Pendiente de categorizar
+      parsedAmount:
+        value: -1
+        currency: EUR
+      parsedAcountingBalance:
+        value: 13199.68
+        currency: EUR
+    - id: 2
+      date: 20/02/2020
+      label: STEP COFFE S
+      description: PAGO CON TARJETA
+      category: '9'
+      icon: coronita:creditcard
+      categoryDescription: Retirada de efectivo
+      parsedAmount:
+        value: -1.5
+        currency: EUR
+      parsedAcountingBalance:
+        value: 13200.68
+        currency: EUR
+      product: ES54029990012311234
+    - id: 3
+      date: 16/02/2020
+      label: itunes.com/bill
+      category: '7'
+      icon: coronita:bill
+      categoryDescription: Otras compras y servicios
+      parsedAmount:
+        value: -329.99
+        currency: EUR
+      badge:
+        status: success
+        label: Financiable
+    - id: 4
+      date: 10/02/2020
+      label: Transferencia realizada
+      description: Para John Doe
+      category: '9'
+      subcategory: '62'
+      icon: coronita:transferaccount
+      categoryDescription: Efectivo y Pagos
+      parsedAmount:
+        value: -3.5
+        currency: EUR
+      parsedAcountingBalance:
+        value: 561.11
+        currency: EUR
+    - id: 5
+      date: 01/02/2020
+      label: Transferencia realizada
+      description: Para John Doe
+      category: '9'
+      icon: coronita:transferaccount
+      categoryDescription: Efectivo y Pagos
+      parsedAmount:
+        value: -3.5
+        currency: EUR
+      parsedAcountingBalance:
+        value: 561.11
+        currency: EUR
+      showCurrentYear: true
+    - id: 6
+      date: 31/01/2020
+      label: Transferencia realizada
+      description: Para John Doe
+      category: '9'
+      icon: coronita:transferaccount
+      categoryDescription: Efectivo y Pagos
+      parsedAmount:
+        value: -3.5
+        currency: EUR
+      parsedAcountingBalance:
+        value: 561.11
+        currency: EUR
+      hideCategory: true
+    - id: 7
+      label: Transferencia realizada
+      description: Para John Doe

@@ -1,0 +1,30 @@
+{
+  "name": "app-challenge-col-nicolas.e2e",
+  "version": "0.1.0",
+  "description": "Application level End 2 End testing for app-challenge-col-nicolas",
+  "keywords": [
+    "cells-e2e-tests"
+  ],
+  "scripts": {
+    "test": "./node_modules/@cells-pepino/cli/bin/cli.js -c ./config/browser.js",
+    "test:vbank": "./node_modules/@cells-pepino/cli/bin/cli.js -c ./config/browser.vbank.js"
+  },
+  "dependencies": {
+    "@cells-pepino/cli": "^1.1.1-alpha.0",
+    "@testing/acis-v5": "^2.0.0",
+    "@testing/wdio-page-objects-async": "^2.0.0",
+    "@types/chai": "^4.2.21",
+    "@wdio/sync": "^5.23.0",
+    "chai": "^4.3.4",
+    "gts": "^3.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^4.3.5"
+  },
+  "resolutions": {
+    "webdriverio": "^5.18.6"
+  },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.19.1"
+  }
+}
